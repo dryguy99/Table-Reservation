@@ -85,18 +85,18 @@ console.log('Magic happens on port ' + port);
 
 
 
-$("#addResBtn").on("click", function() {
+// // $(document).on("click", "#addResBtn", function() {
 
 
-$("#nameInput").val() = this.table;
-$("#numInput").val() = this.phone;
-$("#mIlInput").val() = this.email;
-$("#idInput").val() = this.id;
+// // $("#nameInput").val() = this.table;
+// // $("#numInput").val() = this.phone;
+// // $("#mIlInput").val() = this.email;
+// // $("#idInput").val() = this.id;
 
 
-unit = new x.Table(this.table,this.phone,this.email,this.email);
-    unit.reservation();
+// // unit = new x.Table(this.table,this.phone,this.email,this.email);
+// //     unit.reservation();
 
 
 
-})
+// })
