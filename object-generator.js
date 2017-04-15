@@ -2,10 +2,11 @@
 
 //console.log("we are coninected");
 
-var reservationArray = [];
-var waitListArray=[];
+
 
 var Table = function(name,phone,email,id){
+	var reservationArray = [];
+var waitListArray=[];
 	console.log("we are coninected");
  	this.name=name,
  	this.phone=phone,
@@ -21,13 +22,13 @@ var Table = function(name,phone,email,id){
  	this.reservation= function(){
  		if(reservationArray.length<5){
  			//this.Table.push(reservtionArray)
- 			reservationArray.push(Table);
+ 			reservationArray.push(this);
  			console.log("Went to reservationArray");
- 			console.log(reservationArray);
+ 			//console.log(reservationArray);
  		}
  		else{
  			//this.Table.push(reservtionArray)
- 			waitListArray.push(Table);
+ 			waitListArray.push(this);
  			console.log("Went to waitListArray");
  		}
 

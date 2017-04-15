@@ -63,18 +63,15 @@ router.route('/reservation')
 
 
     .post(function(req, res) {
-         //console.log(req.body.name)
-//           console.log("")
-// var name= (req.body.name);
-// var phone= req.body.phone;
-// var email=req.body.email;
-// var id= req.body.id;
+var name=  req.body.name;
+var phone=req.body.phone;
+var email=req.body.email;
+var id=req.body.id;
 
- //console.log(Json.parse(req.body).name)
-      console.log(JSON.parse(req.body).name);
-unit = new x(name,phone,email,id);
-console.log(unit)
+unit= new x(name,phone,email,id);
+
 unit.reservation();
+//console.log(reservationArray);
 
     res.json({ message: 'Reservation created!' });
             
