@@ -1,7 +1,5 @@
 // call the packages we need
 var x = require("./object-generator.js");
-
-
 var express= require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');	// parse the json data
@@ -9,6 +7,9 @@ var fs = require('fs');
 
 var mysql = require('mysql');				// call mysql
 var AST = require('node-sqlparser');
+var reservationArray=[];
+var waitListArray=[];
+
 var unit;		// call node sql parser
 // fix cors errors
 var allowCrossDomain = function(req, res, next) {
@@ -60,11 +61,22 @@ router.get('/table', function(req, res) {
 
 router.route('/reservation')
 
-// create a cloze card (accessed at POST http://localhost:8080/api/cloze)
-    .post(function(req, res) {
-          
 
-       res.json({ message: 'Reservation created!' });
+    .post(function(req, res) {
+         //console.log(req.body.name)
+//           console.log("")
+// var name= (req.body.name);
+// var phone= req.body.phone;
+// var email=req.body.email;
+// var id= req.body.id;
+
+ //console.log(Json.parse(req.body).name)
+      console.log(JSON.parse(req.body).name);
+unit = new x(name,phone,email,id);
+console.log(unit)
+unit.reservation();
+
+    res.json({ message: 'Reservation created!' });
             
     });
 
