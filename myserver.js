@@ -1,13 +1,16 @@
 
 // call the packages we need
-var express    = require('express');        // call express
+var x = require("./object-generator.js");
+
+
+var express= require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');	// parse the json data
-
 var fs = require('fs');
 
 var mysql = require('mysql');				// call mysql
-var AST = require('node-sqlparser');		// call node sql parser
+var AST = require('node-sqlparser');
+var unit;		// call node sql parser
 // fix cors errors
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -78,3 +81,22 @@ app.use('/api', router);
 // =============================================================================
 app.listen(port);
 console.log('Magic happens on port ' + port);
+
+
+
+
+$("#addResBtn").on("click", function() {
+
+
+$("#nameInput").val() = this.table;
+$("#numInput").val() = this.phone;
+$("#mIlInput").val() = this.email;
+$("#idInput").val() = this.id;
+
+
+unit = new x.Table(this.table,this.phone,this.email,this.email);
+    unit.reservation();
+
+
+
+})
